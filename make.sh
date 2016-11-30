@@ -39,6 +39,10 @@ label_vcsref(){
   perl -i -pane 's!org\.label-schema\.vcs-ref.*!org.label-schema.vcs-ref = "'$git_revision'" \\!g;' Dockerfile
 }
 
+git_tag(){
+  git tag -f $(date +%Y%m%d) && git push -f --tags
+}
+
 ARG=${1:-build}
 $ARG
 
