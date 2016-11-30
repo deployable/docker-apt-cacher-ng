@@ -34,6 +34,11 @@ rebuild(){
   run
 }
 
+label_vcsref(){
+  git_revision=$(git rev-parse --verify HEAD)
+  perl -i -pane 's!org\.label-schema\.vcs-ref.*!org.label-schema.vcs-ref = "'$git_revision'" \\!g;' Dockerfile
+}
+
 ARG=${1:-build}
 $ARG
 

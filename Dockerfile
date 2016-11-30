@@ -16,7 +16,7 @@ label org.label-schema.name = "deployable/apt-cacher-ng" \
       org.label-schema.docker.cmd="docker run --restart always -d -v apt-cacher-ng-vol:/var/cache/apt-cacher-ng:rw -p 3142:3142 deployable/apt-cacher-ng \
       org.label-schema.url="https://github.com/deployable/docker-apt-cacher-ng" \
       org.label-schema.vcs-url="https://github.com/deployable/docker-apt-cacher-ng.git" \
-      org.label-schema.vcs-ref = ""\
+      org.label-schema.vcs-ref = "b4cac33cff2491440c3c010aabc885387ade425f" \
       org.label-schema.schema-version="1.0" 
 
 expose 3142
