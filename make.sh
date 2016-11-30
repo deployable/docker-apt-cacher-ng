@@ -7,7 +7,7 @@ rundir=$($readlink -f "${0%/*}")
 cd "$rundir"
 
 NAME="apt-cacher-ng"
-SCOPE="d"
+SCOPE="deployable"
 SCOPE_NAME="${SCOPE}/${NAME}"
 CONTAINER_NAME="${NAME}"
 
