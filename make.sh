@@ -10,6 +10,9 @@ NAME="apt-cacher-ng"
 SCOPE="deployable"
 SCOPE_NAME="${SCOPE}/${NAME}"
 CONTAINER_NAME="${NAME}"
+if [ -z "${1:-}" ]; then 
+  set -- build "$@"
+fi
 
 build(){
   docker build -t ${SCOPE_NAME} .
@@ -43,6 +46,4 @@ git_tag(){
   git tag -f $(date +%Y%m%d) && git push -f --tags
 }
 
-ARG=${1:-build}
-$ARG
-
+"$@"
