@@ -1,4 +1,4 @@
-from debian:latest
+from debian:jessie
 
 run set -uex; \
     apt-get update -y; \
