@@ -1,0 +1,32 @@
+{
+  "name": "docker-apt-cacher-ng",
+  "version": "1.0.0",
+  "description": "tests for docker ",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deployable/docker-apt-cacher-ng.git"
+  },
+  "keywords": [
+    "docker",
+    "apt-cacher-ng",
+    "proxy",
+    "cache",
+    "package"
+  ],
+  "author": "Matt Hoyle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deployable/docker-apt-cacher-ng/issues"
+  },
+  "homepage": "https://github.com/deployable/docker-apt-cacher-ng#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "cheerio": "^0.22.0",
+    "coffeescript": "^1.12.4",
+    "mocha": "^3.2.0"
+  }
+}

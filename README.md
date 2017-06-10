@@ -2,7 +2,7 @@
 
 Apt-Cacher NG is a caching proxy for linux distribution packages, primarily Debian. https://www.unix-ag.uni-kl.de/~bloch/acng/
 
-The container config adds support for alpine packages.
+The containers apt-cacher-ng config adds support for Alpine Linux packages from http://dl-cdn.alpinelinux.org.
 
 ## Run
 
@@ -28,4 +28,8 @@ Run the image
 Rebuild and run 
 
 `./make.sh rebuild`
+
+## About 
+
+Matt Hoyle - code@deployable.co
 

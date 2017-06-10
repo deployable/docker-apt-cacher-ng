@@ -1,0 +1,5 @@
+--compilers coffee:coffeescript/register
+--require test/fixture/mocha_setup
+--reporter spec
+--ui bdd
+
