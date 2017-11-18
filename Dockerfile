@@ -9,7 +9,7 @@ RUN set -uex; \
 
 COPY files/acng.conf files/mirrors_alpine /etc/apt-cacher-ng/
 
-LABEL org.label-schema.name = "deployable/apt-cacher-ng" \
+LABEL org.label-schema.name="deployable/apt-cacher-ng" \
       org.label-schema.version="1.2.0" \
       org.label-schema.vendor="Deployable" \
       org.label-schema.docker.cmd="docker run --restart always -d -v apt-cacher-ng-vol:/var/cache/apt-cacher-ng:rw -p 3142:3142 deployable/apt-cacher-ng" \
