@@ -10,31 +10,33 @@ NAME="apt-cacher-ng"
 SCOPE="deployable"
 SCOPE_NAME="${SCOPE}/${NAME}"
 CONTAINER_NAME="${NAME}"
-if [ -z "${1:-}" ]; then 
-  set -- build "$@"
-fi
 
-build(){
+cmd=${1:-build}
+shift
+
+####
+
+run_build(){
   docker build -t ${SCOPE_NAME} .
 }
 
-run(){
+run_run(){
   docker run --restart always -d -v apt-cacher-ng-vol:/var/cache/apt-cacher-ng:rw --name ${CONTAINER_NAME} -p 3142:3142 ${SCOPE_NAME}
 }
 
-stop(){
+run_stop(){
   docker stop ${CONTAINER_NAME}
 }
 
-rm(){
+run_rm(){
   docker rm ${CONTAINER_NAME}
 }
 
-rebuild(){
-  build
-  stop
-  rm
-  run
+run_rebuild(){
+  run_build
+  run_stop
+  run_rm
+  run_run
 }
 
 label_vcsref(){
@@ -46,4 +48,21 @@ git_tag(){
   git tag -f $(date +%Y%m%d) && git push -f --tags
 }
 
-"$@"
+####
+
+run_help(){
+  echo "Commands:"
+  awk '/  ".*"/{ print "  "substr($1,2,length($1)-3) }' make.sh
+}
+
+set -x
+
+case $cmd in
+  "build")     run_build "$@";;
+  "rebuild")   run_rebuild "$@";;
+  "template")  run_template "$@";;
+  "run")       run_run "$@";;
+  "stop")      run_stop "$@";;
+  "rm")        run_rm "$@";;
+  '-h'|'--help'|'h'|'help') run_help;;
+esac
