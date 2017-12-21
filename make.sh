@@ -21,8 +21,8 @@ run_build(){
 }
 
 
-run_build_mirrors_centos(){
-  curl -s https://www.centos.org/download/full-mirrorlist.csv | awk -F'","|^"|"$' '{ if ($6 != "") { print $6 } }' > files/centos_mirrors
+run_build_mirrors(){
+  node src/fetch-mirrors.js
 }
 run_build_backends_centos(){
   curl -s https://mirrors.centos.org/release=7&arch=x86_64&repo=extras&infra=container
@@ -70,13 +70,13 @@ run_help(){
 set -x
 
 case $cmd in
-  "build")     run_build "$@";;
-  "build:mirrors:centos")     run_build_mirrors_centos "$@";;
-  "rebuild")   run_rebuild "$@";;
-  "template")  run_template "$@";;
-  "run")       run_run "$@";;
-  "stop")      run_stop "$@";;
-  "rm")        run_rm "$@";;
-  "logs")      run_logs "$@";;
+  "build")         run_build "$@";;
+  "build:mirrors") run_build_mirrors "$@";;
+  "rebuild")       run_rebuild "$@";;
+  "template")      run_template "$@";;
+  "run")           run_run "$@";;
+  "stop")          run_stop "$@";;
+  "rm")            run_rm "$@";;
+  "logs")          run_logs "$@";;
   '-h'|'--help'|'h'|'help') run_help;;
 esac
