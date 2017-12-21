@@ -1,1 +1,2 @@
-http://deb.debian.org/debian/
+http://cdn-fastly.deb.debian.org/debian
+http://cdn-aws.deb.debian.org/debian
