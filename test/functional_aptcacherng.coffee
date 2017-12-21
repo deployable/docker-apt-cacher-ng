@@ -12,7 +12,6 @@ getCacherPage = ( repo_url )->
 
 describe 'cache requests', ->
 
-
   it 'responds with an apt error for a directory', ->
     getCacherPage 'http://dl-cdn.alpinelinux.org/alpine/v3.5/', request_options
       .then (res) ->
@@ -24,12 +23,15 @@ describe 'cache requests', ->
 
   describe 'pulling a file', ->
 
-    this.timeout(5000)
     file_request_options = request_options
     res = null
     
     before ->
-      res = getCacherPage 'http://dl-cdn.alpinelinux.org/alpine/v3.5/main/x86_64/APKINDEX.tar.gz', file_request_options
+      @timeout(5000)
+      getCacherPage 'http://dl-cdn.alpinelinux.org/alpine/v3.5/main/x86_64/APKINDEX.tar.gz', file_request_options
+        .then (result) ->
+           debug(result)
+           res = result
  
     it 'sould return a response', ->
       expect( res ).to.be.ok
@@ -41,7 +43,7 @@ describe 'cache requests', ->
       expect( res.headers ).to.be.ok
 
     it 'should have a bzip content type', ->
-      expect( res.headers['content-type'] ).to.equal 'application/x-gzip'
+      expect( res.headers['content-type'] ).to.equal 'application/octet-stream'
  
     it 'should have a statusCode of 200', ->
       expect( res.statusCode ).to.equal 200

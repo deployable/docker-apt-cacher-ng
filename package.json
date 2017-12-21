@@ -1,10 +1,10 @@
 {
   "name": "docker-apt-cacher-ng",
-  "version": "1.0.0",
+  "version": "1.5.0",
   "description": "tests for docker ",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha test/*.coffee"
   },
   "repository": {
     "type": "git",
