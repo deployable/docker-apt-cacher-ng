@@ -20,6 +20,14 @@ run_build(){
   docker build -t ${SCOPE_NAME} .
 }
 
+
+run_build_mirrors_centos(){
+  curl -s https://www.centos.org/download/full-mirrorlist.csv | awk -F'","|^"|"$' '{ if ($6 != "") { print $6 } }' > files/centos_mirrors
+}
+run_build_backends_centos(){
+  curl -s https://mirrors.centos.org/release=7&arch=x86_64&repo=extras&infra=container
+}
+
 run_run(){
   docker run --restart always -d -v apt-cacher-ng-vol:/var/cache/apt-cacher-ng:rw --name ${CONTAINER_NAME} -p 3142:3142 ${SCOPE_NAME}
 }
@@ -30,6 +38,10 @@ run_stop(){
 
 run_rm(){
   docker rm ${CONTAINER_NAME}
+}
+
+run_logs(){
+  docker logs -f ${CONTAINER_NAME}
 }
 
 run_rebuild(){
@@ -59,10 +71,12 @@ set -x
 
 case $cmd in
   "build")     run_build "$@";;
+  "build:mirrors:centos")     run_build_mirrors_centos "$@";;
   "rebuild")   run_rebuild "$@";;
   "template")  run_template "$@";;
   "run")       run_run "$@";;
   "stop")      run_stop "$@";;
   "rm")        run_rm "$@";;
+  "logs")      run_logs "$@";;
   '-h'|'--help'|'h'|'help') run_help;;
 esac
