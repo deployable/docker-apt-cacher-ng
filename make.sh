@@ -6,7 +6,7 @@ which greadlink >/dev/null 2>/dev/null && readlink=greadlink || readlink=readlin
 rundir=$($readlink -f "${0%/*}")
 cd "$rundir"
 
-NAME="apt-cacher-ng"
+NAME="acng"
 SCOPE="deployable"
 SCOPE_NAME="${SCOPE}/${NAME}"
 CONTAINER_NAME="${NAME}"
@@ -74,6 +74,7 @@ case $cmd in
   "build:mirrors") run_build_mirrors "$@";;
   "rebuild")       run_rebuild "$@";;
   "template")      run_template "$@";;
+  "start")         run_run "$@";;
   "run")           run_run "$@";;
   "stop")          run_stop "$@";;
   "rm")            run_rm "$@";;
