@@ -95,17 +95,40 @@ async function fetchFedora(){
   return mirrors 
 }
 
+async function fetchApache(){
+  let response = await needle('get', 'https://www.apache.org/mirrors/dist.html')
+  let $ = cheerio.load(response.body)
+  let $rows = $('table tr')
+  mirrors = []
+  $rows.each((rowi, el) => {
+    let $el = $(el)
+    let cols = $el.find('td')
+    debug('apache row %s: size %s: ', rowi, cols.length, $(cols).text())
+    if ( cols.length === 5 ) {
+      let $mirror_col = $( $(cols).get(0) )
+      let $scheme_col = $( $(cols).get(1) )
+      let is_http = $scheme_col.text().includes('http')
+      let mirror_link = $mirror_col.find('a').first().attr('href')
+      debug('is_https: %s  mirror: %s', is_http, mirror_link)
+      if ( is_http === true ) mirrors.push(mirror_link)
+    }
+  })
+  return mirrors
+}
+
 async function writeMirror( file, pmData ){
   let file_path = path.resolve( __dirname, '..', 'files', file )
+  if ( typeof pmData === 'function') pmData = pmData()
   let mirror_data = await pmData
   return fs.writeFileAsync(file_path, mirror_data.join('\n'))
 }
 
 async function go(){
   try {
-    writeMirror('centos_mirrors', fetchCentos())
-    writeMirror('fedora_mirrors', fetchFedora())
-    writeMirror('epel_mirrors', fetchEpel())
+    //writeMirror('centos_mirrors', fetchCentos())
+    //writeMirror('fedora_mirrors', fetchFedora())
+    //writeMirror('epel_mirrors', fetchEpel())
+    writeMirror('apache_mirrors', fetchApache)
   }
   catch (error) {
     console.log(error)
