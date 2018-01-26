@@ -1,5 +1,4 @@
 http mirror link
-http://mirror.retentionrange.co.bw/centOS/
 http://mirror.liquidtelecom.com/centos/
 http://mirror.ng/centos/
 http://repos-jnb.psychz.net/centos/
@@ -80,6 +79,7 @@ http://mirror.datacenter.mn/centos/
 http://mirrors.ges.net.pk/centos/
 http://repo.inara.pk/centos/
 http://mirror.pregi.net/centos/
+http://mirror.rise.ph/centos/
 http://download.nus.edu.sg/mirror/centos/
 http://mirror.0x.sg/centos/
 http://mirror.nus.edu.sg/centos/
@@ -99,7 +99,6 @@ http://linux.cs.nctu.edu.tw/CentOS/
 http://ftp.tc.edu.tw/Linux/CentOS/
 http://mirrors.nipa.cloud/centos/
 http://mirrors.bangmodhosting.com/centos/
-http://mirror.btechcloud.com/centos/
 http://mirrors.bestthaihost.com/centos/
 http://mirrors.hosting.in.th/centos/
 http://mirror1.ku.ac.th/centos/
@@ -245,7 +244,6 @@ http://mirror.yannic-bonenberger.com/centos/
 http://ftp.cc.uoc.gr/CentOS/
 http://ftp.otenet.gr/linux/centos/
 http://ftp.ntua.gr/pub/linux/centos/
-http://hu.mirror.guru/centos/
 http://ftp.bme.hu/centos/
 http://ftp.freepark.org/pub/linux/distributions/centos/
 http://mirror.met.hu/centos/
@@ -310,7 +308,6 @@ http://ftp.uninett.no/centos/
 http://centos2.hti.pl/
 http://ftp.agh.edu.pl/centos/
 http://mirror.onet.pl/pub/mirrors/centos/
-http://centos.hitme.net.pl/
 http://ftp.icm.edu.pl/pub/Linux/distributions/centos/
 http://mirror-pl.kielcetechnologypark.net/centos/
 http://centos.slaskdatacenter.com/
@@ -456,6 +453,7 @@ http://mirror.xnet.co.nz/pub/centos/
 http://centos.xfree.com.ar/
 http://centos.brisanet.com.br/
 http://centos.brnet.net.br/centos/
+http://linorg.usp.br/CentOS/
 http://mirror.facom.ufms.br/centos/
 http://mirror.globo.com/centos/
 http://mirror.ci.ifes.edu.br/centos/
@@ -497,7 +495,6 @@ http://mirrors.ocf.berkeley.edu/centos/
 http://mirror.pac-12.org/
 http://repos-lax.psychz.net/centos/
 http://repos.lax.quadranet.com/centos/
-http://mirror.sjc02.svwh.net/centos/
 http://mirrors.sonic.net/centos/
 http://centos.sonn.com/
 http://mirrors.oit.uci.edu/centos/
@@ -542,7 +539,6 @@ http://centos.mbni.med.umich.edu/mirror/
 http://mirror.us-midwest-1.nexcess.net/CentOS/
 http://mirrors.umflint.edu/CentOS/
 http://mirrors.usinternet.com/centos/
-http://mirror.compevo.com/centos/
 http://mirror.linux.duke.edu/pub/centos/
 http://distro.ibiblio.org/centos/
 http://ftp.linux.ncsu.edu/pub/CentOS/
