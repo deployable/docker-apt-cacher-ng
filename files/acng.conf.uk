@@ -4,13 +4,13 @@ LogDir: /var/log/apt-cacher-ng
 Port: 3142
 # BindAddress: localhost 192.168.7.254 publicNameOnMainInterface
 Remap-debrep: file:deb_mirror*.gz /debian ; file:backends_debian # Debian Archives
-Remap-uburep: file:ubuntu_mirrors /ubuntu # Ubuntu Archives
+Remap-uburep: file:ubuntu_mirrors /ubuntu ; file:backends_ubuntu.uk # Ubuntu Archives
 Remap-cygwin: file:cygwin_mirrors /cygwin # ; file:backends_cygwin # incomplete, please create this file or specify preferred mirrors here
 Remap-alxrep: file:archlx_mirrors /archlinux # ; file:backend_archlx # Arch Linux
 Remap-centosmirrorlist: mirrorlist.centos.org
-Remap-centos: file:centos_mirrors # Fedora Linux
-Remap-fedora: file:fedora_mirrors # Fedora Linux
-Remap-epel:   file:epel_mirrors # Fedora EPEL
+Remap-centos: file:centos_mirrors ; file:backends_centos.uk # Fedora Linux
+Remap-fedora: file:fedora_mirrors ; file:backends_fedora.uk # Fedora Linux
+Remap-epel:   file:epel_mirrors ; file:backends_epel.uk # Fedora EPEL
 Remap-slrep:  file:sl_mirrors # Scientific Linux
 Remap-gentoo: file:gentoo_mirrors.gz /gentoo ; file:backends_gentoo # Gentoo Archives
 #Remap-alpine: file:alpine_mirrors /alpine #; dl-cdn.alpinelinux.org # Alpine Archives
@@ -18,7 +18,7 @@ Remap-alpine: dl-cdn.alpinelinux.org
 Remap-yarn:   registry.yarnpkg.com
 Remap-npm:    registry.npmjs.org
 Remap-node:   nodejs.org
-Remap-apache: file:apache_mirrors #; file:backends_apache
+Remap-apache: file:apache_mirrors ; file:backends_apache.uk
 # Remap-secdeb: security.debian.org
 ReportPage: acng-report.html
 # SocketPath:/var/run/apt-cacher-ng/socket

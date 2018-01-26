@@ -53,6 +53,7 @@ http://mirror.euserv.net/linux/fedora/linux
 http://mirror.infonline.de/fedora/linux
 http://mirror.netcologne.de/fedora/linux
 http://mirrors.n-ix.net/fedora/linux
+http://mirror.speedpartner.de/fedora/linux
 http://vesta.informatik.rwth-aachen.de/ftp/pub/Linux/fedora/linux
 http://ftp.klid.dk/ftp/fedora
 http://mirror.easyspeedy.com/fedora
@@ -104,6 +105,7 @@ http://mirror.vpsnet.com/fedora/linux
 http://fedora.blizoo.mk/fedora/linux
 http://download.polytechnic.edu.na/pub/fedora/linux
 http://ftp.polytechnic.edu.na/pub/fedora/linux
+http://mirror.lagoon.nc/pub/fedora/linux
 http://fedora.mirror.wearetriple.com/linux
 http://ftp.nluug.nl/pub/os/Linux/distr/fedora/linux
 http://ftp.nluug.nl/os/Linux/distr/fedora-secondary
@@ -131,7 +133,6 @@ http://ftp.neva.ru/Linux-Distrib/Fedora/linux
 http://mirror.linux-ia64.org/fedora/linux
 http://mirror.yandex.ru/fedora/linux
 http://ftp.acc.umu.se/mirror/fedora/linux
-http://ftp.lysator.liu.se/pub/fedora/linux
 http://ftp.upjs.sk/pub/fedora/linux
 http://mirror.digmia.com/fedora
 http://mirror1.ku.ac.th/fedora

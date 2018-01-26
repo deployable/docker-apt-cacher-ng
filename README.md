@@ -2,7 +2,7 @@
 
 Apt-Cacher NG is a caching proxy for linux distribution packages, primarily Debian. https://www.unix-ag.uni-kl.de/~bloch/acng/
 
-The containers apt-cacher-ng config adds support for:
+The container apt-cacher-ng config adds support for:
 
 - Alpine Linux packages from http://dl-cdn.alpinelinux.org
 - Centos from https://mirrors.centos.org/ - edit `files/backends_centos`
@@ -53,5 +53,5 @@ Delete the `backends_*` files if you don't want acng to push all request to sele
 
 ## About 
 
-Matt Hoyle - code@deployable.co
+Matt Hoyle - code atat deployable.co
 

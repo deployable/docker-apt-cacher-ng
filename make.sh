@@ -17,15 +17,26 @@ shift
 ####
 
 run_build(){
-  docker build -t ${SCOPE_NAME} .
+  docker pull debian:9
+  local tag=${1:-latest}
+  docker build -t ${SCOPE_NAME}:latest .
+}
+run_build_au(){
+  local tag=${1:-latest-au}
+  docker build -f Dockerfile.au -t ${SCOPE_NAME}:$tag .
+}
+run_build_uk(){
+  local tag=${1:-latest-uk}
+  docker build -f Dockerfile.uk -t ${SCOPE_NAME}:$tag .
+}
+run_build_us(){
+  local tag=${1:-latest-us}
+  docker build -f Dockerfile.us -t ${SCOPE_NAME}:$tag .
 }
 
 
 run_build_mirrors(){
   node src/fetch-mirrors.js
-}
-run_build_backends_centos(){
-  curl -s https://mirrors.centos.org/release=7&arch=x86_64&repo=extras&infra=container
 }
 
 run_run(){
@@ -71,6 +82,9 @@ set -x
 
 case $cmd in
   "build")         run_build "$@";;
+  "build:au")         run_build_au "$@";;
+  "build:us")         run_build_us "$@";;
+  "build:uk")         run_build_uk "$@";;
   "build:mirrors") run_build_mirrors "$@";;
   "rebuild")       run_rebuild "$@";;
   "template")      run_template "$@";;
