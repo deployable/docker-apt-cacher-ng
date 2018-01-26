@@ -18,6 +18,13 @@ shift
 
 run_build(){
   docker pull debian:9
+  run_build_mirrors
+  run_build_plain
+  run_build_au
+  run_build_uk
+  run_build_us
+}
+run_build_plain(){
   local tag=${1:-latest}
   docker build -t ${SCOPE_NAME}:latest .
 }
@@ -34,10 +41,10 @@ run_build_us(){
   docker build -f Dockerfile.us -t ${SCOPE_NAME}:$tag .
 }
 
-
 run_build_mirrors(){
   node src/fetch-mirrors.js
 }
+
 
 run_run(){
   docker run --restart always -d -v apt-cacher-ng-vol:/var/cache/apt-cacher-ng:rw --name ${CONTAINER_NAME} -p 3142:3142 ${SCOPE_NAME}
@@ -82,9 +89,10 @@ set -x
 
 case $cmd in
   "build")         run_build "$@";;
-  "build:au")         run_build_au "$@";;
-  "build:us")         run_build_us "$@";;
-  "build:uk")         run_build_uk "$@";;
+  "build:plain")   run_build_plain "$@";;
+  "build:au")      run_build_au "$@";;
+  "build:us")      run_build_us "$@";;
+  "build:uk")      run_build_uk "$@";;
   "build:mirrors") run_build_mirrors "$@";;
   "rebuild")       run_rebuild "$@";;
   "template")      run_template "$@";;
