@@ -97,6 +97,7 @@ http://ftp.isu.edu.tw/pub/Linux/CentOS/
 http://ftp.ksu.edu.tw/pub/CentOS/
 http://linux.cs.nctu.edu.tw/CentOS/
 http://ftp.tc.edu.tw/Linux/CentOS/
+http://mirrors.nipa.cloud/centos/
 http://mirrors.bangmodhosting.com/centos/
 http://mirror.btechcloud.com/centos/
 http://mirrors.bestthaihost.com/centos/
@@ -244,6 +245,7 @@ http://mirror.yannic-bonenberger.com/centos/
 http://ftp.cc.uoc.gr/CentOS/
 http://ftp.otenet.gr/linux/centos/
 http://ftp.ntua.gr/pub/linux/centos/
+http://hu.mirror.guru/centos/
 http://ftp.bme.hu/centos/
 http://ftp.freepark.org/pub/linux/distributions/centos/
 http://mirror.met.hu/centos/
@@ -540,7 +542,6 @@ http://centos.mbni.med.umich.edu/mirror/
 http://mirror.us-midwest-1.nexcess.net/CentOS/
 http://mirrors.umflint.edu/CentOS/
 http://mirrors.usinternet.com/centos/
-http://mirrors.thaidns.co.th/centos/
 http://mirror.compevo.com/centos/
 http://mirror.linux.duke.edu/pub/centos/
 http://distro.ibiblio.org/centos/

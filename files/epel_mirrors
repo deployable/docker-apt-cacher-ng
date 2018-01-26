@@ -17,7 +17,6 @@ http://mirror.globo.com/epel
 http://fedora-epel.mirror.iweb.com
 http://fedora.westmancom.com/epel
 http://mirror.csclub.uwaterloo.ca/fedora/epel
-http://mirror.its.dal.ca/pub/epel
 http://muug.ca/mirror/fedora-epel
 http://mirror.cpsc.ucalgary.ca/mirror/fedora-epel
 http://pkg.adfinis-sygroup.ch/epel
@@ -88,7 +87,6 @@ http://ftp.cc.uoc.gr/pub/linux/epel
 http://ftp.ntua.gr/pub/linux/fedora-epel
 http://ftp.cuhk.edu.hk/pub/linux/fedora-epel
 http://ftp.cuhk.edu.hk/pub/linux/fedora-archive
-http://mirror.miletic.net/pub/fedoraproject/epel
 http://mirror.atomki.mta.hu/epel
 http://buaya.klas.or.id/epel
 http://fedora.dionipe.id/epel
@@ -130,6 +128,7 @@ http://nl.mirror.babylon.network/epel
 http://mirror.xnet.co.nz/pub/epel
 http://ucmirror.canterbury.ac.nz/linux/fedora/fedora-epel
 http://mirror.pregi.net/epel
+http://mirror.rise.ph/fedora-epel
 http://mirrors.nayatel.com/epel
 http://ftp.wcss.pl/pub/linux/epel
 http://mirror.onet.pl/pub/mirrors/fedora/linux/epel
@@ -144,6 +143,7 @@ http://mirror.linux-ia64.org/epel
 http://mirror.logol.ru/epel
 http://mirror.yandex.ru/epel
 http://mirrors.isu.net.sa/pub/fedora/fedora-epel
+http://ftp.acc.umu.se/mirror/fedora/epel
 http://ftp.lysator.liu.se/pub/epel
 http://mirror.nsc.liu.se/fedora-epel
 http://mirrors.glesys.net/fedora/epel
@@ -209,13 +209,11 @@ http://mirrors.kernel.org/fedora-epel
 http://mirrors.kernel.org/fedora-secondary
 http://mirrors.kernel.org/fedora-alt
 http://mirrors.xmission.com/fedora-epel
-http://mirror.uic.edu/EPEL
 http://mirror.umd.edu/fedora/epel
 http://mirror.us.leaseweb.net/epel
 http://mirror.us-midwest-1.nexcess.net/epel
 http://mirror.vcu.edu/pub/gnu+linux/epel
 http://ny-mirrors.evowise.com/epel
-http://pubmirror2.math.uh.edu/fedora-buffet/epel
 http://reflector.westga.edu/repos/Fedora-EPEL
 http://mirrors.rit.edu/fedora/epel
 http://mirrors.rit.edu/fedora/archive
