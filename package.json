@@ -24,6 +24,9 @@
   },
   "homepage": "https://github.com/deployable/docker-apt-cacher-ng#readme",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-async-to-module-method": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
     "chai": "^3.5.0",
     "cheerio": "^1.0.0-rc.2",
     "coffeescript": "^1.12.4",
