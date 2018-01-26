@@ -49,6 +49,9 @@ run_build_us(){
 run_build_mirrors(){
   node src/fetch-mirrors.js
 }
+run_build_mirrors_build(){
+  babel src/fetch-mirrors.es2017 > src/fetch-mirrors.js
+}
 
 
 run_run(){
@@ -93,19 +96,20 @@ run_help(){
 set -x
 
 case $cmd in
-  "release")       run_release "$@";;
-  "build")         run_build "$@";;
-  "build:plain")   run_build_plain "$@";;
-  "build:au")      run_build_au "$@";;
-  "build:us")      run_build_us "$@";;
-  "build:uk")      run_build_uk "$@";;
-  "build:mirrors") run_build_mirrors "$@";;
-  "rebuild")       run_rebuild "$@";;
-  "template")      run_template "$@";;
-  "start")         run_run "$@";;
-  "run")           run_run "$@";;
-  "stop")          run_stop "$@";;
-  "rm")            run_rm "$@";;
-  "logs")          run_logs "$@";;
+  "release")           run_release "$@";;
+  "build")             run_build "$@";;
+  "build:plain")       run_build_plain "$@";;
+  "build:au")          run_build_au "$@";;
+  "build:us")          run_build_us "$@";;
+  "build:uk")          run_build_uk "$@";;
+  "build:mirrors")     run_build_mirrors "$@";;
+  "build:mirrors:src") run_build_mirrors_build "$@";;
+  "rebuild")           run_rebuild "$@";;
+  "template")          run_template "$@";;
+  "start")             run_run "$@";;
+  "run")               run_run "$@";;
+  "stop")              run_stop "$@";;
+  "rm")                run_rm "$@";;
+  "logs")              run_logs "$@";;
   '-h'|'--help'|'h'|'help') run_help;;
 esac
