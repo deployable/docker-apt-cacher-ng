@@ -29,15 +29,20 @@ docker run \
 
 Build the image
 
-`./make.sh build`
+    ./make.sh build
 
 Run the image
 
-`./make.sh run`
+    ./make.sh run
 
 Rebuild and run 
 
-`./make.sh rebuild`
+    ./make.sh rebuild
+
+Build a locale image with local backends configured (`au`, `uk`, `us`)
+
+    ./make.sh build
+    ./make.sh build:au
 
 
 ## Mirror and Backend lists
@@ -46,9 +51,11 @@ The latest mirrors can be fetched with `src/fetch-mirrors.js`. This script Requi
 
 It will download and parse the latest Centos, Fedora, Epel and Apache mirror lists into `files/*_mirrors` files for acng.
 
-Configure your selected backends from those mirrors lists in `files/backends_{name}`. They are currently set to AU backends which may be slow for other regions. 
+Configure your selected backends from those mirrors lists in `files/backends_{name}`. 
+There are packaged au, uk and us backends
 
-Delete the `backends_*` files if you don't want acng to push all request to selected mirrors. 
+The default acng config in the `deployable/acng:latest` tag has no opinion on backends 
+`deployable/acng:latest-au` includes the AU backends, `:latest-uk` and `:latest-us` tags are built as well. 
 
 
 ## About 
