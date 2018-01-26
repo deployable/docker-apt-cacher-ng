@@ -5,10 +5,10 @@ Apt-Cacher NG is a caching proxy for linux distribution packages, primarily Debi
 The container apt-cacher-ng config adds support for:
 
 - Alpine Linux packages from http://dl-cdn.alpinelinux.org
-- Centos from https://mirrors.centos.org/ - edit `files/backends_centos`
-- Fedora from https://admin.fedoraproject.org/mirrormanager/mirrors/Fedora - edit `files/backends_fedora`
-- Epel package from https://admin.fedoraproject.org/mirrormanager/mirrors/EPEL - edit `files/backends_epel` 
-- Apache packages from https://www.apache.org/mirrors/dist.html - edit `files/backends_apache`
+- Centos from https://mirrors.centos.org/
+- Fedora from https://admin.fedoraproject.org/mirrormanager/mirrors/Fedora
+- Epel packages from https://admin.fedoraproject.org/mirrormanager/mirrors/EPEL
+- Apache releases from https://www.apache.org/mirrors/dist.html
 - NPM packages from https://registry.yarnpkg.com and https://registry.npmjs.org
 - Downloads from http://nodejs.org
 
