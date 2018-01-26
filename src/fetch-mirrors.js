@@ -13,6 +13,7 @@ const path = require('path');
 
 class Fetch {
 
+  // Fetch a url and load it into cheerio for querying
   static fetchAndCheerio(url) {
     return (0, _bluebird.coroutine)(function* () {
       debug('retriving url: %s', url);
@@ -62,6 +63,7 @@ class Fetch {
       let $ = yield _this.fetchAndCheerio('https://admin.fedoraproject.org/mirrormanager/mirrors/EPEL');
       let $rows = $('.container table').first().find('tr');
       let mirrors = [];
+
       $rows.each(function (row, el) {
         let mirror_info = $(el).children('td').slice(3, 4).contents();
         let mode = null;
@@ -119,6 +121,7 @@ class Fetch {
       let $ = yield _this3.fetchAndCheerio('https://www.apache.org/mirrors/dist.html');
       let $rows = $('table tr');
       let mirrors = [];
+
       $rows.each(function (rowi, el) {
         let $el = $(el);
         let cols = $el.find('td');
@@ -136,6 +139,8 @@ class Fetch {
     })();
   }
 
+  // Write out the result of a promise to file. 
+  // promise result should be an array of http mirrors
   static writeMirror(file, promise) {
     return (0, _bluebird.coroutine)(function* () {
       let file_path = path.resolve(__dirname, '..', 'files', file);
@@ -168,6 +173,7 @@ class Fetch {
       }
     })();
   }
+
 }
 
 Fetch.go();

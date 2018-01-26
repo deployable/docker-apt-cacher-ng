@@ -7,8 +7,10 @@ const fs = Promise.promisifyAll(require('fs'))
 const readline = require('readline')
 const path = require('path')
 
+
 class Fetch {
 
+  // Fetch a url and load it into cheerio for querying
   static async fetchAndCheerio(url){
     debug('retriving url: %s', url)
     let response = await needle('get', url)
@@ -57,6 +59,7 @@ class Fetch {
     let $ = await this.fetchAndCheerio('https://admin.fedoraproject.org/mirrormanager/mirrors/EPEL')
     let $rows = $('.container table').first().find('tr')
     let mirrors = []
+
     $rows.each((row,el) => {
       let mirror_info = $(el).children('td').slice(3,4).contents()
       let mode = null
@@ -106,6 +109,7 @@ class Fetch {
     let $ = await this.fetchAndCheerio('https://www.apache.org/mirrors/dist.html')
     let $rows = $('table tr')
     let mirrors = []
+
     $rows.each((rowi, el) => {
       let $el = $(el)
       let cols = $el.find('td')
@@ -122,6 +126,8 @@ class Fetch {
     return mirrors
   }
 
+  // Write out the result of a promise to file. 
+  // promise result should be an array of http mirrors
   static async writeMirror( file, promise ){
     let file_path = path.resolve( __dirname, '..', 'files', file )
     if ( typeof promise === 'function') promise = promise()
@@ -140,8 +146,8 @@ class Fetch {
     catch (error) {
       console.log(error)
     }
-
   }
+
 }
 
 Fetch.go()
