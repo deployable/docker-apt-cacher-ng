@@ -16,6 +16,11 @@ shift
 
 ####
 
+run_release(){
+  git tag $(date +%Y%m%d)
+  git push --tags
+}
+
 run_build(){
   docker pull debian:9
   run_build_mirrors
@@ -88,6 +93,7 @@ run_help(){
 set -x
 
 case $cmd in
+  "release")       run_release "$@";;
   "build")         run_build "$@";;
   "build:plain")   run_build_plain "$@";;
   "build:au")      run_build_au "$@";;
