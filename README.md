@@ -13,6 +13,18 @@ The container apt-cacher-ng config adds support for:
 - Downloads from http://nodejs.org
 
 
+## Docker Registry Images
+
+The [`deployable/acng` repository is available on Docker hub](https://hub.docker.com/r/deployable/acng/). 
+
+The image tags available to install are:
+```
+deployable/acng
+deployable/acng:latest-au
+deployable/acng:latest-uk
+deployable/acng:latest-us
+```
+
 ## Run
 
 ```
@@ -21,7 +33,7 @@ docker run \
   --detach \
   --volume apt-cacher-ng-vol:/var/cache/apt-cacher-ng:rw \
   --publish 3142:3142 \
-  deployable/apt-cacher-ng
+  deployable/acng
 ```
 
 
@@ -59,6 +71,9 @@ The default acng config in the `deployable/acng:latest` tag has no opinion on ba
 
 
 ## About 
+
+Docker Hub: https://hub.docker.com/r/deployable/acng/
+GitHub: https://github.com/deployable/docker-apt-cacher-ng
 
 Matt Hoyle - code atat deployable.co
 
