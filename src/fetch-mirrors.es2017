@@ -128,10 +128,10 @@ class Fetch {
 
   // Write out the result of a promise to file. 
   // promise result should be an array of http mirrors
-  static async writeMirror( file, promise ){
+  static async writeMirror( file, mirror_promise ){
     let file_path = path.resolve( __dirname, '..', 'files', file )
-    if ( typeof promise === 'function') promise = promise()
-    let mirror_data = await promise
+    if ( typeof mirror_promise === 'function' ) mirror_promise = mirror_promise()
+    let mirror_data = await mirror_promise
     debug('writeMirror has got the mirror data for file "%s"', file)
     return fs.writeFileAsync(file_path, mirror_data.join('\n'))
   }
