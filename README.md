@@ -47,6 +47,10 @@ Run the image
 
     ./make.sh run
 
+Run a localised image (au, uk, us)
+
+    ./make.sh run:us
+
 Rebuild and run 
 
     ./make.sh rebuild

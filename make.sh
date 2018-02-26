@@ -55,11 +55,28 @@ run_build_mirrors_build(){
 
 
 run_run(){
-  docker run --restart always -d -v apt-cacher-ng-vol:/var/cache/apt-cacher-ng:rw --name ${CONTAINER_NAME} -p 3142:3142 ${SCOPE_NAME}
+  run_run_tag=$1
+  run_run_image=${SCOPE_NAME}
+  if [ -n "$run_run_tag" ]; then
+    run_run_image="${run_run_image}:$run_run_tag"
+  fi
+  docker run --restart always -d -v apt-cacher-ng-vol:/var/cache/apt-cacher-ng:rw --name ${CONTAINER_NAME} -p 3142:3142 ${run_run_image}
+}
+
+run_run_au(){
+  run_run latest-au
+}
+run_run_uk(){
+  run_run latest-uk
+}
+run_run_us(){
+  run_run latest-us
 }
 
 run_stop(){
-  docker stop ${CONTAINER_NAME}
+  if docker inspect ${CONTAINER_NAME}; then
+    docker stop ${CONTAINER_NAME};
+  fi
 }
 
 run_rm(){
@@ -108,6 +125,9 @@ case $cmd in
   "template")          run_template "$@";;
   "start")             run_run "$@";;
   "run")               run_run "$@";;
+  "run:au")            run_run_au "$@";;
+  "run:uk")            run_run_uk "$@";;
+  "run:us")            run_run_us "$@";;
   "stop")              run_stop "$@";;
   "rm")                run_rm "$@";;
   "logs")              run_logs "$@";;
