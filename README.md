@@ -1,15 +1,17 @@
 # Dockerised apt-cacher-ng
 
+[`deployable/acng`](https://hub.docker.com/r/deployable/acng/)
+
 Apt-Cacher NG is a caching proxy for linux distribution packages, primarily Debian. https://www.unix-ag.uni-kl.de/~bloch/acng/
 
-The packaged apt-cacher-ng config adds support for:
+The image apt-cacher-ng config adds support for:
 
 - Alpine Linux packages from http://dl-cdn.alpinelinux.org
-- Centos from https://mirrors.centos.org/
-- Fedora from https://admin.fedoraproject.org/mirrormanager/mirrors/Fedora
-- Epel packages from https://admin.fedoraproject.org/mirrormanager/mirrors/EPEL
+- Centos mirrors from https://mirrors.centos.org/
+- Fedora mirrors from https://admin.fedoraproject.org/mirrormanager/mirrors/Fedora
+- Epel mirrors from https://admin.fedoraproject.org/mirrormanager/mirrors/EPEL
 - Apache releases from https://www.apache.org/mirrors/dist.html
-- NPM packages from https://registry.yarnpkg.com and https://registry.npmjs.org (proxy only)
+- NPM packages from https://registry.yarnpkg.com and https://registry.npmjs.org (proxied CONNECT only)
 - Downloads from http://nodejs.org
 
 The `au`, `uk` and `us` images configure local mirror backends when geo mirrors are not available. 
