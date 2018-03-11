@@ -1,10 +1,10 @@
-# Dockerised apt-cacher-ng
+# apt-cacher-ng docker image
 
 [`deployable/acng`](https://hub.docker.com/r/deployable/acng/)
 
 Apt-Cacher NG is a caching proxy for linux distribution packages, primarily Debian. https://www.unix-ag.uni-kl.de/~bloch/acng/
 
-The image apt-cacher-ng config adds support for:
+This image for apt-cacher-ng config adds support for:
 
 - Alpine Linux packages from http://dl-cdn.alpinelinux.org
 - Centos mirrors from https://mirrors.centos.org/
