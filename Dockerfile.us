@@ -1,4 +1,4 @@
-FROM deployable/acng:latest
+FROM yorickps/acng:latest
 
 ENV ACNG_LOCALE="us"
 

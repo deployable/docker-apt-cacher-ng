@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/deployable/docker-apt-cacher-ng.git"
+    "url": "git+https://github.com/yorickps/docker-apt-cacher-ng.git"
   },
   "keywords": [
     "docker",
@@ -20,9 +20,9 @@
   "author": "Matt Hoyle",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/deployable/docker-apt-cacher-ng/issues"
+    "url": "https://github.com/yorickps/docker-apt-cacher-ng/issues"
   },
-  "homepage": "https://github.com/deployable/docker-apt-cacher-ng#readme",
+  "homepage": "https://github.com/yorickps/docker-apt-cacher-ng#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-plugin-transform-async-to-module-method": "^6.24.1",
