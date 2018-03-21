@@ -1,0 +1,9 @@
+services:
+ - docker
+before_install:
+  - docker run --rm -i lukasmartinelli/hadolint hadolint --ignore DL4000 - < Dockerfile
+install:
+  - docker build -t apt-cacher-ng .
+  - docker run -d -p 127.0.0.1:3142:3142 --name apt-cacher-ng apt-cacher-ng 
+script:
+  - docker ps | grep -q apt-cacher-ng
