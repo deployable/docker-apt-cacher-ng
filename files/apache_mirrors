@@ -1,6 +1,5 @@
 http://www-eu.apache.org/dist/
 http://www-us.apache.org/dist/
-http://mirrors.dcarsat.com.ar/apache/
 http://apache.mirror.amaze.com.au/
 http://apache.mirror.digitalpacific.com.au/
 http://mirror.intergrid.com.au/apache/
@@ -21,7 +20,6 @@ http://muug.ca/mirror/apache-dist/
 http://apache.mirror.rafal.ca/
 http://mirror.dsrg.utoronto.ca/apache/
 http://mirror.csclub.uwaterloo.ca/apache/
-http://apache.parentingamerica.com/
 http://apache.mirror.vexxhost.com/
 http://apache.mirror.colo-serv.net/
 http://apache.mirror.gtcomm.net/
@@ -107,6 +105,7 @@ http://mirror.evowise.com/apache/
 http://apache.javapipe.com/
 http://mirrors.hostingromania.ro/apache.org/
 http://mirrors.m247.ro/apache/
+http://mirrors.nav.ro/apache/
 http://mirror.linux-ia64.org/apache/
 http://apache-mirror.rbc.ru/pub/apache/
 http://tux.rainside.sk/apache/
