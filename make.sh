@@ -18,6 +18,7 @@ shift
 
 run_release(){
   git tag $(date +%Y%m%d)
+  git push
   git push --tags
 }
 
