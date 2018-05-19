@@ -25,7 +25,7 @@ class Fetch {
         input: response
       })
 
-      const mirrors = ['mirror.centos.org']
+      const mirrors = ['http://mirror.centos.org/']
 
       line_reader.on('line', line => {
         // poor mans csv parsing, remove leading and trailing `"`s
