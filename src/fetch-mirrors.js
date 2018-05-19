@@ -30,19 +30,19 @@ class Fetch {
         input: response
       });
 
-      const mirrors = [];
+      const mirrors = ['mirror.centos.org'];
 
       line_reader.on('line', line => {
         // poor mans csv parsing, remove leading and trailing `"`s
-        // then splut the string on `","`. 
+        // then split the string on `","`. 
         // Only works when every field is quoted with `"`
         line.replace(/^"/, '').replace(/"$/, '');
         let fields = line.split(/","/);
-        if (fields.length > 4 && fields[4]) {
-          //debug('fields', fields)
+        if (fields.length > 4 && fields[4] && fields[4] !== 'http mirror link') {
+          debug('fields', fields);
           mirrors.push(fields[4]);
         } else {
-          if (fields.length === 1 || fields[5] && fields[5].includes('ftp')) return;
+          if (fields.length === 1 || fields[5] && fields[5].includes('ftp') || fields[4] === 'http mirror link') return;
           console.error('centos - bad line', line);
         }
       });
@@ -141,11 +141,11 @@ class Fetch {
 
   // Write out the result of a promise to file. 
   // promise result should be an array of http mirrors
-  static writeMirror(file, promise) {
+  static writeMirror(file, mirror_promise) {
     return (0, _bluebird.coroutine)(function* () {
       let file_path = path.resolve(__dirname, '..', 'files', file);
-      if (typeof promise === 'function') promise = promise();
-      let mirror_data = yield promise;
+      if (typeof mirror_promise === 'function') mirror_promise = mirror_promise();
+      let mirror_data = yield mirror_promise;
       debug('writeMirror has got the mirror data for file "%s"', file);
       return fs.writeFileAsync(file_path, mirror_data.join('\n'));
     })();

@@ -25,22 +25,23 @@ class Fetch {
         input: response
       })
 
-      const mirrors = []
+      const mirrors = ['mirror.centos.org']
 
       line_reader.on('line', line => {
         // poor mans csv parsing, remove leading and trailing `"`s
-        // then splut the string on `","`. 
+        // then split the string on `","`. 
         // Only works when every field is quoted with `"`
         line.replace(/^"/,'').replace(/"$/,'')
         let fields = line.split(/","/)
-        if ( fields.length > 4 && fields[4] ) {
-          //debug('fields', fields)
+        if ( fields.length > 4 && fields[4] && fields[4] !== 'http mirror link' ) {
+          debug('fields', fields)
           mirrors.push(fields[4])
         } 
         else {
           if ( 
             fields.length === 1 || 
-            ( fields[5] && fields[5].includes('ftp') )
+            ( fields[5] && fields[5].includes('ftp') ) ||
+            fields[4] === 'http mirror link'
           ) return
           console.error('centos - bad line', line)
         }

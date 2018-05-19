@@ -29,7 +29,6 @@ http://mirror.cpsc.ucalgary.ca/mirror/fedora/linux
 http://mirror.switch.ch/ftp/mirror/fedora/linux
 http://fedora.gtdinternet.com
 http://mirrors.yun-idc.com/fedora
-http://mirror.lzu.edu.cn/fedora
 http://mirrors.163.com/fedora
 http://mirrors.njupt.edu.cn/fedora
 http://mirrors.sohu.com/fedora
@@ -65,7 +64,6 @@ http://mirror.netsite.dk/fedora/linux
 http://mirrors.dotsrc.org/fedora/linux
 http://mirror.cedia.org.ec/fedora/linux
 http://mirror.epn.edu.ec/fedora/linux
-http://mirror.ueb.edu.ec/fedora/linux
 http://mirror.uta.edu.ec/fedora/linux
 http://ftp.uma.es/mirror/fedora/linux
 http://es-mirrors.evowise.com/fedora
@@ -89,8 +87,8 @@ http://uk-mirrors.evowise.com/fedora
 http://ftp.cc.uoc.gr/pub/linux/fedora/linux
 http://ftp.ntua.gr/pub/linux/fedora/linux
 http://ftp.otenet.gr/linux/fedora/linux
-http://ftp.cuhk.edu.hk/pub/Linux/fedora
 http://ftp.cuhk.edu.hk/pub/linux/fedora
+http://ftp.cuhk.edu.hk/pub/Linux/fedora
 http://mirror.miletic.net/pub/fedoraproject/fedora/linux
 http://ftp.freepark.org/pub/linux/distributions/fedora/linux
 http://ftp.fsn.hu/pub/linux/distributions/fedora/linux
@@ -149,6 +147,7 @@ http://ftp.dei.uc.pt/pub/linux/fedora
 http://mirrors.up.pt/fedora
 http://fedora.mirrors.telekom.ro/pub/fedora/linux
 http://ftp.ines.lug.ro/fedora/linux
+http://ftp.upcnet.ro/mirrors/fedora/pub/fedora/linux
 http://mirrors.nav.ro/fedora/linux
 http://mirrors.nxthost.com/fedora-enchilada
 http://mirror.etf.bg.ac.rs/fedora
@@ -184,7 +183,6 @@ http://download-ib01.fedoraproject.org/pub/fedora-secondary
 http://fedora.mirror.constant.com/fedora/linux
 http://fedora.mirror.lstn.net
 http://fedora.mirrors.pair.com/linux
-http://fedora.mirrors.tds.net/fedora
 http://ftp.cse.buffalo.edu/pub/fedora/linux
 http://ftp.usf.edu/pub/fedora/linux
 http://ftp.ussg.iu.edu/linux/fedora/linux
@@ -239,7 +237,6 @@ http://mirror.us-midwest-1.nexcess.net/fedora
 http://mirror.vcu.edu/pub/gnu+linux/fedora
 http://mirror.web-ster.com/fedora
 http://ny-mirrors.evowise.com/fedora
-http://packages.oit.ncsu.edu/fedora/linux
 http://pubmirror1.math.uh.edu/fedora-buffet/fedora/linux
 http://pubmirror2.math.uh.edu/fedora-buffet/fedora/linux
 http://pubmirror2.math.uh.edu/fedora-buffet/fedora-secondary
