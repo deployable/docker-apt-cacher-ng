@@ -56,7 +56,7 @@ run_build_mirrors_build(){
 
 
 run_run(){
-  run_run_tag=$1
+  run_run_tag=${1:-latest}
   run_run_image=${SCOPE_NAME}
   if [ -n "$run_run_tag" ]; then
     run_run_image="${run_run_image}:$run_run_tag"
@@ -75,13 +75,15 @@ run_run_us(){
 }
 
 run_stop(){
-  if docker inspect ${CONTAINER_NAME}; then
+  if docker inspect ${CONTAINER_NAME} >/dev/null; then
     docker stop ${CONTAINER_NAME};
   fi
 }
 
 run_rm(){
-  docker rm ${CONTAINER_NAME}
+  if docker inspect ${CONTAINER_NAME} >/dev/null; then
+    docker rm ${CONTAINER_NAME}
+  fi
 }
 
 run_logs(){
