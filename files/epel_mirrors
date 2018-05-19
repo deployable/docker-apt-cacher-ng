@@ -20,11 +20,11 @@ http://mirror.host.ag/epel
 http://mirrors.neterra.net/epel
 http://mirrors.netix.net/epel
 http://mirrors.uni-ruse.bg/epel
-http://mirror.globo.com/epel
 http://mirror.datacenter.by/pub/fedoraproject.org/epel
 http://fedora-epel.mirror.iweb.com
 http://fedora.westmancom.com/epel
 http://mirror.csclub.uwaterloo.ca/fedora/epel
+http://mirror.its.dal.ca/pub/epel
 http://muug.ca/mirror/fedora-epel
 http://mirror.spreitzer.ch/epel
 http://mirror.switch.ch/ftp/mirror/epel
@@ -196,6 +196,7 @@ http://repo.boun.edu.tr/epel
 http://ftp.yzu.edu.tw/Linux/Fedora-EPEL
 http://mirror01.idc.hinet.net/EPEL
 http://epel.besthosting.ua
+http://epel.ip-connect.vn.ua
 http://ftp.colocall.net/pub/epel
 http://mirror.omnilance.com/epel
 http://mirrors.colocall.net/epel
