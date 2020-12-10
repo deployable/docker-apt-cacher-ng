@@ -1,6 +1,6 @@
 FROM debian:stretch-slim
 
-LABEL maintainer=yorick.poels@gmail.com
+LABEL maintainer='Yorick Poels'
 LABEL org.label-schema.name="yorickps/apt-cacher-ng" \
       org.label-schema.version="1.6.0" \
       org.label-schema.vendor="yorickps" \
