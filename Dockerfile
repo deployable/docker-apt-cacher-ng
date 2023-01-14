@@ -1,4 +1,4 @@
-FROM debian:buster-slim
+FROM debian:bullseye-slim
 LABEL maintainer="Yorick Poels" 
 LABEL org.label-schema.name="yorickps/apt-cacher-ng" \
       org.label-schema.version="1.6.0" \
