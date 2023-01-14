@@ -8,7 +8,7 @@ LABEL org.label-schema.name="yorickps/apt-cacher-ng" \
       org.label-schema.vcs-url="https://github.com/yorickps/docker-apt-cacher-ng.git" \
       org.label-schema.schema-version="1.0"
 
-ENV APT_CACHER_NG_VERSION=3.2.1-1 \
+ENV APT_CACHER_NG_VERSION=3.6.4-1 \
     APT_CACHER_NG_CACHE_DIR=/var/cache/apt-cacher-ng \
     APT_CACHER_NG_LOG_DIR=/var/log/apt-cacher-ng \
     APT_CACHER_NG_USER=apt-cacher-ng
